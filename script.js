@@ -11,7 +11,7 @@ let openDoor1;
 let openDoor2;
 let openDoor3;
 
-let closedDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg"
+let closedDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg";
 
 let currentlyPlaying = true;
 
@@ -62,18 +62,18 @@ if (!isClicked(doorImage3) && currentlyPlaying) {
 	}
 }
 
-if (!currentlyPlaying) {
-  startButton.onclick = () => {
-    console.log('start button got clicked');
+startButton.onclick = () => {
+  console.log('start button got clicked');
+  if (!currentlyPlaying) {
     startRound();
   }
 }
 
 const startRound = () => {
   console.log('currently playing is ' + currentlyPlaying);
-  numClosedDoors = 3;
   startButton.innerHTML = "Good luck!";
   currentlyPlaying = true;
+  numClosedDoors = 3;
   doorImage1 = closedDoorPath;
   doorImage2 = closedDoorPath;
   doorImage3 = closedDoorPath;
